@@ -6,7 +6,6 @@ def GermanWord2Number(textnum, numwords={}):
     scales = ["hundert", "tausend", "million", "milliarde", "billion", "billiarde"]
 
 
-
     # REPLACE SOME NUMBER WORDS
     if "eins" in textnum:
         textnum = textnum.replace("eins", "ein")
@@ -20,7 +19,6 @@ def GermanWord2Number(textnum, numwords={}):
         textnum = textnum.replace("billionen", "billion")
     elif "billiarden" in textnum:
         textnum = textnum.replace("billiarden", "billiarde")
-
 
 
     # SPLIT NUMBER WORDS
@@ -41,7 +39,6 @@ def GermanWord2Number(textnum, numwords={}):
         textnum = textnum.replace(" ßig", "ßig")
     if "komma" in textnum:
         textnum = textnum.replace("komma", " komma ")
-
 
 
 
@@ -85,8 +82,6 @@ def GermanWord2Number(textnum, numwords={}):
 
 
 
-
-
 # EXAMPLE: "zweihundert" , "zwei hundert"
-# EXAMPLE FOR COMMA: "zweihundertkommadrei" , "zwei hundert komma drei" --> WARNING: ONLY FOR ONE NUMBER AFTER COMMA
+# EXAMPLE FOR COMMA: "dreikommazwei" , "drei komma zwei" --> WORKS ONLY FOR ONE NUMBER AFTER COMMA
 print(GermanWord2Number("vierundzwanzigkommadrei"))
