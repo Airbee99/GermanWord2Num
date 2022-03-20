@@ -78,10 +78,15 @@ def GermanWord2Number(textnum, numwords={}):
             current = 0
 
 
-    return result + current
+    final_result = result + current
+    if ".0" in str(final_result):
+        final_result = str(final_result).replace(".0", "")
+        final_result = int(final_result)
+    return final_result
+
 
 
 
 # EXAMPLE: "zweihundert" , "zwei hundert"
 # EXAMPLE FOR COMMA: "dreikommazwei" , "drei komma zwei" --> WORKS ONLY FOR ONE NUMBER AFTER COMMA
-print(GermanWord2Number("vierundzwanzigkommadrei"))
+print(GermanWord2Number("dreikommazwei"))
