@@ -1,4 +1,4 @@
-def GermanWord2Number(textnum, numwords={}):
+def GermanWord2Num(textnum, numwords={}):
 
     # POSSIBLE NUMBERWORDS
     units = ["null", "ein", "zwei", "drei", "vier", "fünf", "sechs", "sieben", "acht", "neun", "zehn", "elf", "zwölf"]
@@ -89,4 +89,4 @@ def GermanWord2Number(textnum, numwords={}):
 
 # EXAMPLE: "zweihundert" , "zwei hundert"
 # EXAMPLE FOR COMMA: "dreikommazwei" , "drei komma zwei" --> WORKS ONLY FOR ONE NUMBER AFTER COMMA
-print(GermanWord2Number("dreikommazwei"))
+print(GermanWord2Num("dreikommazwei"))
